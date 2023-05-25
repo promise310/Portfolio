@@ -19,9 +19,10 @@
     --text-color-light: hsl(var(--hue-color), 8%, 65%);
     --input-color: hsl(var(--hue-color), 70%, 96%);
     --body-color: hsl(var(--hue-color), 60%, 99%);
-    --container-color: #fff;
     --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
     --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
+    --container-color: hsl(var(--hue-color), 69%, 97%);
+    --img-color: brightness(0) invert(0);
 
     /*========== Font and typography ==========*/
     --body-font: 'Poppins', sans-serif;
@@ -75,16 +76,19 @@ body.dark-theme{
     --title-color: hsl(var(--hue-color), 8%, 95%);
     --text-color: hsl(var(--hue-color), 8%, 75%);
     --input-color: hsl(var(--hue-color), 29%, 16%);
-    --body-color: hsl(var(--hue-color), 28%, 12%);
+    --body-color: hsl(var(--hue-color), 28%, 6%);
     --container-color: hsl(var(--hue-color), 29%, 16%);
     --scroll-bar-color: hsl(var(--hue-color), 12%, 48%);
     --scroll-thumb-color: hsl(var(--hue-color), 12%, 36%);
-   
+    --container-color: hsl(var(--hue-color), 19%, 13%);
+    --img-color: brightness(0) invert(1);
+
 }
 
-/* .home__img{
-  filter: brightness(0) invert(1);
-} */
+.home__img,
+.about__img{
+  filter: var(--img-color)
+}
 
 /*========== Button Dark/Light ==========*/
 .nav__btns{
@@ -420,19 +424,21 @@ img {
   row-gap: 3.5rem;
 }
 
-.skills__title{
+.skills__header{
   display: flex;
   justify-content: center;
   align-items: center;
-  column-gap: .5rem;
-  font-size: var(--small-font-size);
-  font-weight: var(--font-semi-bold);
-  margin-bottom: 2.5rem;
+  margin-bottom: var(--mb-2-5);
 }
 
-.skills__title i{
-  font-size: 1rem;
-  font-weight: initial;
+.skills__icon{
+  font-size: 2rem;
+  color: var(--first-color);
+  margin-right: var(--mb-0-75);
+}
+
+.skills__title{
+  font-size: var(--h3-font-size);
 }
 
 .skills__info,
@@ -463,10 +469,10 @@ img {
 .skills__blob img{
   width: 40px;
 }
-.skills__name{
+/* .skill__name{
   font-size: var(--small-font-size);
   margin-bottom: .25rem;
-}
+} */
 
 .skills__subtitle{
   font-size: var(--tiny-font-size);
@@ -822,6 +828,7 @@ img {
   .qualification__data{
     gap: .5rem;
   }
+
 
 }
 
