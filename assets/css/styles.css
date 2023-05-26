@@ -87,7 +87,7 @@ body.dark-theme{
 
 .home__img,
 .about__img{
-  filter: var(--img-color)
+  filter: var(--img-color);
 }
 
 /*========== Button Dark/Light ==========*/
