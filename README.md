@@ -4,6 +4,6 @@
 - Developed first with the Mobile First methodology, then for desktop.
 
 #Related Website
-https://www.w3schools.com/colors/colors_hsl.asp
-https://iconscout.com/
-https://www.svgrepo.com/
+1. https://www.w3schools.com/colors/colors_hsl.asp
+2. https://iconscout.com/
+3. https://www.svgrepo.com/
