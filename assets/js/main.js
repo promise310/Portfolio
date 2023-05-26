@@ -41,7 +41,7 @@ tabs.forEach(tab => {
         })
         target.classList.add('qualification__active')
 
-        tab.forEach(tab =>{
+        tabs.forEach(tab =>{
             tab.classList.remove('qualification__active')
         })
         tab.classList.add('qualification__active')
@@ -178,3 +178,10 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-theme', getCurrentTheme())
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
+
+/*==================== Cursor ====================*/ 
+// var cursor = document.querySelector(".cursor");
+// var cursor2 = document.querySelector(".cursor2");
+// document.addEventListener("mousemove", function(e){
+//     cursor.style.cssText = cursor2.style.cssText = "left: " + e.clientX + "px; top: " + e.clientY + "px ";
+// });
