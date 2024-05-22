@@ -86,7 +86,7 @@
 
                         <div class="home__data">
                             <h1 class="home__title">Hi, I'm Seoyoung</h1>
-                            <h3 class="home__subtitile">Web & App Developer</h3>
+                            <h3 class="home__subtitile">Software Developer</h3>
                             <p class="home__description">ENTJ, Cat Person, Unconventionality, Liveliness, Prudence, Diligence </p>
                             <a href="#contact" class="button button--flex">
                                 Contact Me <i class="uil uil-message button__icon"></i>
@@ -124,7 +124,7 @@
                                 <span class="about__info-name">Years <br> experience</span>
                             </div>
                             <div>
-                                <span class="about__info-title">11+</span>
+                                <span class="about__info-title">10+</span>
                                 <span class="about__info-name">Completed <br> project</span>
                             </div>
                             <!-- <div>
@@ -151,7 +151,7 @@
                     <div class="swiper-wrapper">
                         <!-- Portfolio 1 -->
                         <div class="portfolio__content grid swiper-slide">
-                            <img src="./assets/img/4.png" alt="" class="portfolio__img">
+                            <img src="./assets/img/projects/al.png" alt="" class="portfolio__img">
 
                             <div class="portfolio__data">
                                 <h3 class="portfolio__title">Algorie</h3>
@@ -180,7 +180,7 @@
                         </div>
                         <!-- Portfolio 2 -->
                         <div class="portfolio__content grid swiper-slide">
-                            <img src="./assets/img/1.png" alt="" class="portfolio__img">
+                            <img src="./assets/img/projects/cw.png" alt="" class="portfolio__img">
 
                             <div class="portfolio__data">
                                 <h3 class="portfolio__title">coverwave</h3>
@@ -206,7 +206,7 @@
 
                         <!-- Portfolio 3 -->
                         <div class="portfolio__content grid swiper-slide">
-                            <img src="./assets/img/2.png" alt="" class="portfolio__img">
+                            <img src="./assets/img/projects/cs.png" alt="" class="portfolio__img">
 
                             <div class="portfolio__data">
                                 <h3 class="portfolio__title">ColorScape Website</h3>
@@ -235,7 +235,7 @@
 
                         <!-- Portfolio 4 -->
                         <div class="portfolio__content grid swiper-slide">
-                            <img src="./assets/img/3.png" alt="" class="portfolio__img">
+                            <img src="./assets/img/projects/mo.png" alt="" class="portfolio__img">
 
                             <div class="portfolio__data">
                                 <h3 class="portfolio__title">Momentum</h3>
@@ -272,9 +272,157 @@
                     <!-- Pagination -->
                     <div class="swiper-pagination"></div>
                 </div>
-            </section>
+            <!-- </section> -->
 
-            <!-- Complete Portfolio Website with Bootstrap 1:44:21 -->
+            <!-- Complete Portfolio Website -->
+            <div class="container">
+                <!-- <h2 class="section__title">Poroject</h2> -->
+        
+                <div class="menu-bar">
+                    <button onclick="showCategory('all')" data-category="all">All</button>
+                    <button onclick="showCategory('web')" data-category="web">Website</button>
+                    <button onclick="showCategory('app')" data-category="apps">App</button>
+                    <button onclick="showCategory('data')" data-category="data">Data</button>
+                </div>
+                <hr class="divider" />
+                <div class="projects" id="projects-all">
+                    <div class="project" onclick="showDetail('web', 1)">
+                        <img src="./assets/img/projects/cs.png" alt="Project 1">
+                        <p>ColorScape</p>
+                        <p>Website</p>
+                    </div>
+                    <div class="project" onclick="showDetail('web', 2)">
+                        <img src="./assets/img/projects/cw.png" alt="Project 2">
+                        <p>coverwave</p>
+                        <p>Website</p>
+                    </div>
+                    <div class="project" onclick="showDetail('web', 3)">
+                        <img src="./assets/img/projects/al.png" alt="Project 3">
+                        <p>Algorie</p>
+                        <p>Website</p>
+                    </div>
+                    <div class="project" onclick="showDetail('web', 4)">
+                        <img src="./assets/img/projects/gc.png" alt="Project 4">
+                        <p>GDSC - Firebase</p>
+                        <p>Website</p>
+                    </div>
+                    <div class="project" onclick="showDetail('web', 5)">
+                        <img src="./assets/img/projects/ge.png" alt="Project 5">
+                        <p>GDSC - Gemini</p>
+                        <p>Website</p>
+                    </div>
+                    <div class="project" onclick="showDetail('web', 6)">
+                        <img src="./assets/img/projects/mo.png" alt="Project 6">
+                        <p>Momentum</p>
+                        <p>Website</p>
+                    </div>
+                    <div class="project" onclick="showDetail('web', 7)">
+                        <img src="./assets/img/projects/ce.png" alt="Project 7">
+                        <p>Roaming Calculator</p>
+                        <p>Website</p>
+                    </div>
+
+
+                    <div class="project" onclick="showDetail('app', 1)">
+                        <img src="./assets/img/project3.jpg" alt="Project 8">
+                        <p>Socialize Recycling</p>
+                        <p>App</p>
+                    </div>
+                    <div class="project" onclick="showDetail('app', 2)">
+                        <img src="./assets/img/project1.jpg" alt="Project 9">
+                        <p>MuHASS</p>
+                        <p>App</p>
+                    </div>
+                    
+
+
+                    <div class="project" onclick="showDetail('data', 1)">
+                        <img src="./assets/img/projects/fn.png" alt="Project 7">
+                        <p>Fight Night</p>
+                        <p>Data</p>
+                    </div>
+                   
+
+
+                </div>
+
+
+                <div class="projects" id="projects-web" style="display: none;">
+                    <div class="project" onclick="showDetail('web', 1)">
+                        <img src="./assets/img/projects/cs.png" alt="Project 1">
+                        <p>ColorScape</p>
+                        <p>Website</p>
+                    </div>
+                    <div class="project" onclick="showDetail('web', 2)">
+                        <img src="./assets/img/projects/cw.png" alt="Project 2">
+                        <p>coverwave</p>
+                        <p>Website</p>
+                    </div>
+                    <div class="project" onclick="showDetail('web', 3)">
+                        <img src="./assets/img/projects/al.png" alt="Project 3">
+                        <p>Algorie</p>
+                        <p>Website</p>
+                    </div>
+                    <div class="project" onclick="showDetail('web', 4)">
+                        <img src="./assets/img/projects/gc.png" alt="Project 4">
+                        <p>GDSC - Firebase</p>
+                        <p>Website</p>
+                    </div>
+                    <div class="project" onclick="showDetail('web', 5)">
+                        <img src="./assets/img/projects/ge.png" alt="Project 5">
+                        <p>GDSC - Gemeni</p>
+                        <p>Website</p>
+                    </div>
+                    <div class="project" onclick="showDetail('web', 6)">
+                        <img src="./assets/img/projects/mo.png" alt="Project 6">
+                        <p>Momentum</p>
+                        <p>Website</p>
+                    </div>
+                    <div class="project" onclick="showDetail('web', 7)">
+                        <img src="./assets/img/projects/ce.png" alt="Project 7">
+                        <p>Roaming Calculator</p>
+                        <p>Website</p>
+                    </div>
+                </div>
+
+
+                <div class="projects" id="projects-app" style="display: none;">
+                    <div class="project" onclick="showDetail('app', 1)">
+                        <img src="./assets/img/project3.jpg" alt="Project 8">
+                        <p>Socialize Recycling</p>
+                        <p>App</p>
+                    </div>
+                    <div class="project" onclick="showDetail('app', 2)">
+                        <img src="./assets/img/project1.jpg" alt="Project 9">
+                        <p>MuHASS</p>
+                        <p>App</p>
+                    </div>
+                </div>
+
+
+                <div class="projects" id="projects-data" style="display: none;">
+                    <div class="project" onclick="showDetail('data', 1)">
+                        <img src="./assets/img/projects/fn.png" alt="Project 10">
+                        <p>Fight Night</p>
+                        <p>Data</p>
+                    </div>
+                    
+                </div>
+            </div>
+        
+            <!-- Modal -->
+            <div id="modal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                    <p id="modal-name"></p>
+                    <img id="modal-image" src="" alt="Project Image">
+                    <p id="modal-lan"></p>
+                    <p id="modal-description"></p>
+                    <a id="modal-link" href="" target="_blank">View on GitHub</a>
+                </div>
+            </div>
+        </section>
+        
 
 
             <!--==================== SKILLS ====================-->
@@ -459,7 +607,7 @@
                                     <span class="qualification__subtitle">Google Developer Student Clubs @ UCF</span>
                                     <div class="qualification__calender">
                                         <i class="uil uil-calendar-alt"></i>
-                                        Sep 2023 - Present
+                                        Sep 2023 - May 2024
                                     </div>
                                 </div>
                             </div>
@@ -471,7 +619,7 @@
                                     <span class="qualification__subtitle">WEAR Lab UCF</span>
                                     <div class="qualification__calender">
                                         <i class="uil uil-calendar-alt"></i>
-                                        Mar 2023 - Present
+                                        Mar 2023 - May 2024
                                     </div>
                                 </div>
 

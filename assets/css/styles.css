@@ -644,6 +644,171 @@ img {
   outline: none;
 }
 
+
+/*==================== PROJECT ====================*/
+
+.menu-bar {
+  max-width: 300px;
+  margin-top: 15%;
+  margin-left: 3%;
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  /* border-bottom: 2px solid var(--first-color); */
+  /* position: relative; */
+}
+
+/* hr.divider {
+  height: 0.2rem;
+  margin: 0rem 0 -3 13rem;
+  background-color: var(--first-color);
+  opacity: 1;
+} */
+
+hr.divider {
+  height: 0.2rem;  /* Set the height of the line */
+  margin: 0rem 0rem;  /* Remove default margins */
+  background-color: var(--first-color);  /* Set the background color */
+  border: none;  /* Remove default border */
+  width: 45%; /* Match the width of the menu bar */
+  opacity: 1;  /* Ensure full opacity */
+  border-radius: 10%;
+}
+
+.menu-bar button {
+  color: var(--title-color);
+  font-weight: var(--font-medium);
+  font-size: var(--body-font);
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.menu-bar button:hover,
+.menu-bar button.active {
+  color: var(--first-color);
+}
+
+
+.projects {
+  background-color: var(--container-color);
+  border-radius: .5rem;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  justify-content: space-around;
+
+}
+
+/* 프젝 3개 이상일 경우 주석 */
+/* #projects-data .project, */
+#projects-app .project{
+  margin-left: 2%;
+}
+
+
+.project {
+  width: 30%;
+  margin-bottom: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.project img {
+  width: 200%;
+  height: 125px; /* Fixed height for all images */
+  object-fit: cover; /* Maintain aspect ratio and cover the container */
+  border-radius: 4px;
+  transition: filter 0.3s ease;
+}
+
+.project img:hover {
+  filter: brightness(80%);
+}
+
+.projects::after {
+  content: "";
+  flex: 0.84 0 30%;
+}
+
+.project p {
+  /* margin-top: 0px; */
+  font-size: 14px;
+  color: var(--text-color);
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+  position: relative;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.modal p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.modal a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.modal a:hover {
+  background-color: #555;
+}
+
+@media screen and (max-width: 350px) {
+  .project {
+    width: 48%; /* Two projects per row */
+  }
+}
+
+
+
 /*==================== CONTACT ME ====================*/
 .container__container{
   row-gap: 3rem;
@@ -871,6 +1036,11 @@ img {
   .skills__info{
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .project {
+    flex: 1 1 calc(50% - 10px); 
+    margin-right: 3%;
+}
 
   .skills__title{
     font-size: var(--normal-font-size);

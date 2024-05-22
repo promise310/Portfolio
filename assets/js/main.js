@@ -63,6 +63,148 @@ let swiper = new Swiper(".portfolio__container", {
     },
   });
 
+/*==================== PORTFOLIO PROJECT  ====================*/
+const projectDetails = {
+    web: [
+        {
+            name: "ColorScape",
+            img: "./assets/img/projects/cs.png",
+            lan: "HTML / CSS / JavaScript / Python",
+            description: "Long description for Web Project 1.",
+            link: "https://github.com/username/project1"
+        },
+        {
+            name: "covorwave",
+            img: "./assets/img/projects/cw.png",
+            lan: "React / Node.js / Firebase",
+            description: "Long description for Web Project 1.",
+            link: "https://github.com/username/project1"
+        },
+        {
+            name: "Algorie",
+            img: "./assets/img/projects/al.png",
+            lan: "HTML / CSS / JavaScript / Python",
+            description: "Long description for Web Project 1.",
+            link: "https://github.com/username/project1"
+        },
+        {
+            name: "GDSC - Firebase",
+            img: "./assets/img/projects/gc.png",
+            lan: "HTML / CSS / JavaScript / Python",
+            description: "Long description for Web Project 1.",
+            link: "https://github.com/username/project1"
+        },
+        {
+            name: "GDSC - Gemini",
+            img: "./assets/img/projects/ge.png",
+            lan: "HTML / CSS / JavaScript / Python",
+            description: "Long description for Web Project 1.",
+            link: "https://github.com/username/project1"
+        },
+        {
+            name: "Momentum",
+            img: "./assets/img/projects/mo.png",
+            lan: "HTML / CSS / JavaScript",
+            description: "Long description for Web Project 1.",
+            link: "https://github.com/username/project1"
+        },
+        {
+            name: "Roaming Calculator",
+            img: "./assets/img/projects/ce.png",
+            lan: "HTML / CSS / JavaScript",
+            description: "Long description for Web Project 1.",
+            link: "https://github.com/username/project1"
+        }
+    ],
+    app: [
+        {
+            name: "Socialize Recycling",
+            img: "./assets/img/project3.jpg",
+            lan: "HTML / CSS / JavaScript / Python",
+            description: "Long description for Web Project 1.",
+            link: "https://github.com/username/project1"
+        },
+        {
+            name: "MuHASS",
+            img: "./assets/img/project1.jpg",
+            lan: "HTML / CSS / JavaScript / Python",
+            description: "Long description for Web Project 1.",
+            link: "https://github.com/username/project1"
+        },
+    ],
+    data: [
+        {
+            name: "Fight Night",
+            img: "./assets/img/projects/fn.png",
+            lan: "HTML / CSS / JavaScript / Python",
+            description: "Long description for Web Project 1.",
+            link: "https://github.com/username/project1"
+        },
+        {
+            name: "Fight Night",
+            img: "./assets/img/projects/fn.png",
+            lan: "HTML / CSS / JavaScript / Python",
+            description: "Long description for Web Project 1.",
+            link: "https://github.com/username/project1"
+        },
+    ]
+};
+
+
+// Add this function to your existing JavaScript
+function setActiveButton(category) {
+    const buttons = document.querySelectorAll('.menu-bar button');
+    buttons.forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.getAttribute('data-category') === category) {
+            btn.classList.add('active');
+        }
+    });
+}
+
+
+// Modify the showCategory function to set the active button
+function showCategory(category) {
+    const categories = ['all', 'web', 'app', 'data'];
+    categories.forEach(cat => {
+        document.getElementById(`projects-${cat}`).style.display = 'none';
+    });
+    if (category === 'all') {
+        document.getElementById(`projects-all`).style.display = 'flex';
+    } else {
+        document.getElementById(`projects-${category}`).style.display = 'flex';
+    }
+
+    // Set active button
+    setActiveButton(category);
+}
+
+
+
+function showDetail(category, index) {
+    const detail = projectDetails[category][index - 1];
+    document.getElementById('modal-name').textContent = detail.name;
+    document.getElementById('modal-image').src = detail.img;
+    document.getElementById('modal-lan').textContent = detail.lan;
+    document.getElementById('modal-description').textContent = detail.description;
+    document.getElementById('modal-link').href = detail.link;
+    document.getElementById('modal').style.display = 'block';
+}
+
+function closeModal() {
+    document.getElementById('modal').style.display = 'none';
+}
+
+window.onclick = function(event) {
+    if (event.target == document.getElementById('modal')) {
+        closeModal();
+    }
+}
+
+
+
+
+
 /*==================== EMAIL JS ====================*/
 const contactForm = document.getElementById('contact-form'),
 contactName = document.getElementById('contact-name'),
