@@ -660,22 +660,16 @@ img {
   /* position: relative; */
 }
 
-/* hr.divider {
-  height: 0.2rem;
-  margin: 0rem 0 -3 13rem;
-  background-color: var(--first-color);
-  opacity: 1;
-} */
-
 hr.divider {
-  height: 0.2rem;  /* Set the height of the line */
-  margin: 0rem 0rem;  /* Remove default margins */
+  height: 0.2rem; 
+  margin: 0rem 0rem;  
   background-color: var(--first-color);  /* Set the background color */
-  border: none;  /* Remove default border */
-  width: 45%; /* Match the width of the menu bar */
-  opacity: 1;  /* Ensure full opacity */
+  border: none;  
+  width: 45%; 
+  /* opacity: 1;  */
   border-radius: 10%;
 }
+
 
 .menu-bar button {
   color: var(--title-color);
@@ -761,6 +755,7 @@ hr.divider {
   width: 80%;
   max-width: 600px;
   position: relative;
+  border-radius: 8px;
 }
 
 .close {
@@ -799,12 +794,6 @@ hr.divider {
 
 .modal a:hover {
   background-color: #555;
-}
-
-@media screen and (max-width: 350px) {
-  .project {
-    width: 48%; /* Two projects per row */
-  }
 }
 
 
@@ -1050,7 +1039,6 @@ hr.divider {
     gap: .5rem;
   }
 
-
 }
 
 /* For medium devices */
@@ -1085,9 +1073,11 @@ hr.divider {
     grid-template-columns: .6fr;
     justify-content: center;
   }
+
 }
 
 @media screen and (min-width: 768px){
+
   .container{
     margin-left: auto;
     margin-right: auto;
@@ -1245,6 +1235,31 @@ hr.divider {
   }
   .contact__input{
     grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+@media screen and (max-width: 1200px) {
+ 
+  hr.divider {
+    width: 45%; /* Match the width of the menu bar */
+  }
+}
+
+
+@media screen and (max-width: 350px) {
+  .project {
+    width: 48%; /* Two projects per row */
+  }
+
+  hr.divider {
+    width: 95%; /* Match the width of the menu bar */
+  }
+}
+
+@media screen and (max-width: 540px) {
+  hr.divider {
+    width: 100%; /* Match the width of the menu bar */
   }
 }
 
