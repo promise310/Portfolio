@@ -194,6 +194,10 @@ img {
   align-items: center;
 }
 
+.nav__logo{
+  font-size: var(--h3-font-size);
+}
+
 .nav__logo,
 .nav__toggle{
   color: var(--title-color);
@@ -655,7 +659,6 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   /* border-bottom: 2px solid var(--first-color); */
   /* position: relative; */
 }
@@ -748,7 +751,7 @@ hr.divider {
 }
 
 .modal-content {
-  background-color: #fff;
+  background-color: var(--container-color);
   margin: 15% auto;
   padding: 20px;
   border: 1px solid #888;
@@ -767,7 +770,7 @@ hr.divider {
 
 .close:hover,
 .close:focus {
-  color: #000;
+  color: var(--first-color);
   text-decoration: none;
   cursor: pointer;
 }
@@ -781,19 +784,31 @@ hr.divider {
 .modal p {
   font-size: 16px;
   margin-bottom: 20px;
+  color: var(--text-color);
+}
+
+
+#modal-name{
+  color: var(--title-color);
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-medium);
+}
+
+#modal-lan{
+  font-weight: var(--font-medium);
 }
 
 .modal a {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #333;
-  color: white;
+  background-color: var(--first-color);
+  color: var(--body-color);
   text-decoration: none;
   border-radius: 4px;
 }
 
 .modal a:hover {
-  background-color: #555;
+  background-color: #333;
 }
 
 

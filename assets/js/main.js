@@ -84,7 +84,7 @@ const projectDetails = {
             name: "Algorie",
             img: "./assets/img/projects/al.png",
             lan: "HTML / CSS / JavaScript / Python / OpenAI API",
-            description: "Algorie is a website that helps users with coding problems. By taking two inputs—a coding problem description and the user's current code—it generates hints to guide users towards completing their code independently.",
+            description: "Algorie is a website that helps users with coding problems. It generates hints that guide the user to complete the code independently by taking two inputs: the description of the coding problem and the user's current code.",
             link: "https://github.com/username/project1"
         },
         {
@@ -102,10 +102,10 @@ const projectDetails = {
             link: "https://github.com/promise310/GDSC_Gemini?tab=readme-ov-file"
         },
         {
-            name: "Momentum",
+            name: "My Momentum",
             img: "./assets/img/projects/mo.png",
             lan: "HTML / CSS / JavaScript",
-            description: "Long description for Web Project 1.",
+            description: "My Momentum is a project inspired by the Chrome extension 'Momentum', developed using HTML, CSS, and JavaScript. It includes modules for background and quotes, clock, user login, to-do list, and weather. Users can experience dynamic backgrounds, motivational quotes, real-time clocks, weather updates, and the ability to store and manage to-do lists.",
             link: "https://github.com/promise310/my-momentum"
         },
         {
@@ -113,7 +113,7 @@ const projectDetails = {
             img: "./assets/img/projects/ce.png",
             lan: "HTML / CSS / JavaScript / json",
             description: "This project aims to develop a web extension that performs various calculations, including unit conversions, basic arithmetic, and advanced mathematical functions. The extension will serve as a shortcut in the user's web browser, eliminating the need to retrieve a physical calculator or open another window on their computer.",
-            link: "https://github.com/TannerAssenmacher/Calculator-Extension"
+            link: "https://github.com/promise310/Calculator-Extension"
         }
     ],
     app: [
@@ -126,9 +126,9 @@ const projectDetails = {
         },
         {
             name: "MuHASS",
-            img: "./assets/img/project1.jpg",
+            img: "./assets/img/projects/mu.jpg",
             lan: "HTML / CSS / JavaScript / Python",
-            description: "Long description for Web Project 1.",
+            description: "This project was created for WEAR Lab at UCF. It involves replicating gloves and developing an app to pair with them. The real-time mobile app, developed with React Native, displays users' biometric and environmental data. The app connects to the gloves via Bluetooth and communicates the data collected from the gloves' sensors.",
             link: "https://github.com/username/project1"
         },
     ],
