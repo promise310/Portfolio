@@ -794,6 +794,11 @@ hr.divider {
   font-weight: var(--font-medium);
 }
 
+#modal-image{
+  overflow-clip-margin: content-box;
+  overflow: clip;
+}
+
 #modal-lan{
   font-weight: var(--font-medium);
 }
@@ -811,7 +816,9 @@ hr.divider {
   background-color: #333;
 }
 
-
+.modal-video {
+  margin-bottom: 20px;
+}
 
 /*==================== CONTACT ME ====================*/
 .container__container{

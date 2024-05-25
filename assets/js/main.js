@@ -68,49 +68,49 @@ const projectDetails = {
     web: [
         {
             name: "ColorScape",
-            img: "./assets/img/projects/cs.png",
+            img: ["./assets/img/projects/cs.png"],
             lan: "HTML / CSS / JavaScript / Python / OpenCV / TensorFlow",
             description: "ColorScape uses AI to explore unknown landscapes based on five colors chosen by users. It can also identify different colors in nature. With ColorScape, you can create imaginary landscapes and envision how other planets or places might look.",
             link: "https://github.com/promise310/LandscapeGenerator"
         },
         {
             name: "covorwave",
-            img: "./assets/img/projects/cw.png",
+            img: ["./assets/img/projects/cw.png"],
             lan: "React / Node.js / Firebase / Spotify API / Stable Diffusion",
             description: "Coverwave is a website that lets users generate personalized album covers using AI. By analyzing Spotify playlists, it creates custom cover art that reflects each user's musical taste and style. The platform uses advanced algorithms to consider factors like genre, mood, and tempo of the songs, producing stunning visuals. With its intuitive interface, Coverwave makes it easy to create album covers in just a few clicks.",
             link: "https://github.com/promise310/coverwave"
         },
         {
             name: "Algorie",
-            img: "./assets/img/projects/al.png",
+            img: ["./assets/img/projects/al.png"],
             lan: "HTML / CSS / JavaScript / Python / OpenAI API",
             description: "Algorie is a website that helps users with coding problems. It generates hints that guide the user to complete the code independently by taking two inputs: the description of the coding problem and the user's current code.",
             link: "https://github.com/username/project1"
         },
         {
             name: "GDSC - Firebase",
-            img: "./assets/img/projects/gc.png",
+            img: ["./assets/img/projects/gc.png"],
             lan: "HTML / CSS / JavaScript / Firebase",
             description: "This Firebase Workshop project at the Google Developer Student Club (GDSC) is a hands-on session designed to guide student through setting up a Firebase project and connecting to it using JavaScript via the Firebase CDN.",
             link: "https://github.com/promise310/GDSC_ChatApp?tab=readme-ov-file"
         },
         {
             name: "GDSC - Gemini",
-            img: "./assets/img/projects/ge.png",
+            img: ["./assets/img/projects/ge.png"],
             lan: "HTML / CSS / JavaScript / Gemini API",
             description: "This is a Gemini Workshop project at the Google Developer Student Club (GDSC). The project focuses on using the Gemini API to analyze images and provide approximate nutritional information. By passing images through the Gemini API, users can gain insights into the nutritional content of various food items.",
             link: "https://github.com/promise310/GDSC_Gemini?tab=readme-ov-file"
         },
         {
             name: "My Momentum",
-            img: "./assets/img/projects/mo.png",
+            img: ["./assets/img/projects/mo.png"],
             lan: "HTML / CSS / JavaScript",
             description: "My Momentum is a project inspired by the Chrome extension 'Momentum', developed using HTML, CSS, and JavaScript. It includes modules for background and quotes, clock, user login, to-do list, and weather. Users can experience dynamic backgrounds, motivational quotes, real-time clocks, weather updates, and the ability to store and manage to-do lists.",
             link: "https://github.com/promise310/my-momentum"
         },
         {
             name: "Roaming Calculator",
-            img: "./assets/img/projects/ce.png",
+            img: ["./assets/img/projects/ce.png"],
             lan: "HTML / CSS / JavaScript / json",
             description: "This project aims to develop a web extension that performs various calculations, including unit conversions, basic arithmetic, and advanced mathematical functions. The extension will serve as a shortcut in the user's web browser, eliminating the need to retrieve a physical calculator or open another window on their computer.",
             link: "https://github.com/promise310/Calculator-Extension"
@@ -119,23 +119,23 @@ const projectDetails = {
     app: [
         {
             name: "Socialize Recycling",
-            img: "./assets/img/projects/re.png",
+            img: ["./assets/img/projects/re1.png", "./assets/img/projects/re.png"],
             lan: "React Native / MongoDB / Realm",
             description: "The Socialize Recycling App provides a fun platform for people to connect and promote recycling together. It offers information on recycling practices and encourages users to discover new ways to recycle. Through interactive features, the app fosters a community focused on environmental sustainability and social engagement.",
             link: "https://github.com/promise310/Recycling_App"
         },
         {
             name: "MuHASS",
-            img: "./assets/img/projects/mu.jpg",
-            lan: "HTML / CSS / JavaScript / Python",
-            description: "This project was created for WEAR Lab at UCF. It involves replicating gloves and developing an app to pair with them. The real-time mobile app, developed with React Native, displays users' biometric and environmental data. The app connects to the gloves via Bluetooth and communicates the data collected from the gloves' sensors.",
-            link: "https://github.com/username/project1"
+            img: ["./assets/img/projects/mup.png"],
+            lan: "React Native / MongoDB / Node.js / FastAPI",
+            description: "This project was created for WEAR Lab at UCF. The real-time mobile app, developed with React Native, displays users' biometric and environmental data. The app connects to the glove watch via Bluetooth and communicates the data collected from the glove' sensors."
+            // link: "https://github.com/username/project1"
         },
     ],
     data: [
         {
             name: "Fight Night",
-            img: "./assets/img/projects/fn.png",
+            img: ["./assets/img/projects/fn.png"],
             lan: "Pandas / Python / Flask",
             description: "The goal of this project is to develop a machine learning model using a data-driven approach to predict the outcome of MMA fights. This model will utilize historical MMA match data, including fighter statistics such as record, reach, and height, as well as bout information like date, venue, and judges. By training on this dataset, the model aims to predict the best fighters in individual sports like MMA based on their performance and other relevant factors.",
             link: "https://github.com/promise310/Goat.ED"
@@ -173,26 +173,36 @@ function showCategory(category) {
 }
 
 
-
 function showDetail(category, index) {
     const detail = projectDetails[category][index - 1];
     document.getElementById('modal-name').textContent = detail.name;
-    document.getElementById('modal-image').src = detail.img;
+    
+    const modalImagesContainer = document.getElementById('modal-image');
+    modalImagesContainer.innerHTML = detail.img.map(src => `<img src="${src}" alt="Project Image">`).join('');
+    
     document.getElementById('modal-lan').textContent = detail.lan;
     document.getElementById('modal-description').textContent = detail.description;
-    document.getElementById('modal-link').href = detail.link;
-    document.getElementById('modal').style.display = 'block';
-}
-
-function closeModal() {
-    document.getElementById('modal').style.display = 'none';
-}
-
-window.onclick = function(event) {
-    if (event.target == document.getElementById('modal')) {
-        closeModal();
+    // document.getElementById('modal-link').href = detail.link;
+    const modalLink = document.getElementById('modal-link');
+    if (detail.link) {
+        modalLink.href = detail.link;
+        modalLink.style.display = 'inline-block';
+    } else {
+        modalLink.style.display = 'none';
     }
-}
+
+    document.getElementById('modal').style.display = 'block';
+  }
+  
+  function closeModal() {
+    document.getElementById('modal').style.display = 'none';
+  }
+  
+  window.onclick = function(event) {
+    if (event.target == document.getElementById('modal')) {
+      closeModal();
+    }
+  }
 
 
 
